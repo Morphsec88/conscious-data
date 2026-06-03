@@ -1,0 +1,9 @@
+The core idea is that the data and the storage enter a kind of symbiosis. 
+The file keeps its original name at all times, but it also receives the identifier 
+of the storage it is currently on. This identifier is not visible to the user. 
+It is written into a deeper layer of the file that the directory system can read.
+
+The system does not need to search for the file. 
+It simply reads the current storage identifier from this deeper layer. 
+The past locations are optional; the system may track them, but it does not have to. 
+The focus is always on the current storage.
