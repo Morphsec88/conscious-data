@@ -1,0 +1,13 @@
+When the file is saved, the system writes the current storage identifier 
+into the file’s deeper layer. The user does not see this. 
+Only the directory system can read it.
+
+Example:
+- The file is saved on storage T5.
+- The deeper layer receives the code "T5".
+- Later the file is moved to storage T6.
+- The deeper layer is updated to "T6".
+
+The system does not perform a search. 
+It simply reads the identifier from the file itself 
+and knows exactly where the file is.
