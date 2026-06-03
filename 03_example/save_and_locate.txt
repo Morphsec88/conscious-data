@@ -1,5 +1,12 @@
-In addition to the storage identifier, the system may also record further internal metadata in the file’s deeper layer, such as the layer and row identifiers. These values are updated automatically whenever the file’s position changes.
+In addition to the storage identifier, 
+the system may also record further internal metadata in the file’s deeper layer,
+such as the layer and row identifiers.
+These values are updated automatically whenever the file’s position changes.
 
-The user does not see any of this information; it is accessible only to the directory and storage‑management subsystem. 
+The user does not see any of this information;
+it is accessible only to the directory and storage‑management subsystem. 
 
-The mechanism remains the same: the system does not perform a search but reads the current storage, layer, and row identifiers directly from the file’s own metadata, ensuring it always knows the file’s exact location.
+The mechanism remains the same:
+the system does not perform a search but reads the current storage, layer,
+and row identifiers directly from the file’s own metadata,
+ensuring it always knows the file’s exact location.
