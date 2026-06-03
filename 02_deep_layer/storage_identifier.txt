@@ -1,0 +1,11 @@
+The storage identifier (for example: T5, T6, or any other code) is written into 
+a deeper layer of the file. This layer is not part of the filename and not visible 
+to the user. The file's name never changes.
+
+The directory system can read this deeper layer. 
+This is how it knows where the file currently is. 
+The identifier is always updated to reflect the present storage location.
+
+Previous identifiers can be kept if needed, but this is optional. 
+The essential rule is that the file always carries the identifier 
+of the storage it is on right now.
