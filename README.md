@@ -1,7 +1,7 @@
 
-<img width="750" height="497" alt="consciousdata" src="https://github.com/user-attachments/assets/eb176d36-0c23-4ae5-ac52-c13ff8318609"
-  
-  />
+<img width="750" height="497" alt="consciousdata" src="https://github.com/user-attachments/assets/eb176d36-0c23-4ae5-ac52-c13ff8318609" />
+
+
 # Conscious Data Architecture
 
 A searchless, zero-index physical storage routing engine designed for high-throughput enterprise infrastructure.
