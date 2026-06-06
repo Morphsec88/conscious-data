@@ -2,32 +2,32 @@
 <img width="750" height="497" alt="consciousdata" src="https://github.com/user-attachments/assets/eb176d36-0c23-4ae5-ac52-c13ff8318609" />
 
 
-# Conscious Data Architecture
+# ConsciousEngine - Autonomous Data Capsule Space (2026)
 
-A searchless, zero-index physical storage routing engine designed for high-throughput enterprise infrastructure.
+ConsciousEngine is a paradigm-shifting storage engine built from scratch. It abandons outdated database patterns, heavy transaction logging, and messy hash tables. Instead, it treats data as an **autonomous entity** that fuses with its physical/logical coordinates upon generation.
 
-## Core Principle
+## Core Architecture & Paradigm Shift
 
-Traditional storage architectures rely on database lookups, secondary indexes, or B-Trees ($O(\log N)$ or $O(N)$ space/time complexity) to locate records. Conscious Data eliminates the indexing layer entirely by utilizing absolute metadata mapping. 
+* **Search Narrowing:** Data aligns directly with a macroscopic coordinate (`Storage / Layer / Row`), completely removing micro-management over disk blocks and bringing sessional search times down to zero.
+* **The Capsule Model:** Every data chunk wraps itself between deterministic Start (`\x02`) and End (`\x03`) control characters. The data inherently limits and knows its own length.
+* **Fused Identity Stamp:** During creation, the directory coordinates and exact byte sizes are permanently baked into the capsule's header.
+* **Validation Loop:** Upon retrieval, the engine performs a cross-check between the physical file location and the data's internal consciousness stamp. If a file was manually tampered with or moved, the engine rejects it instantly.
 
-The physical storage path is derived deterministically from the object's metadata at the execution layer. The storage topology is immediately accessible in $O(1)$ time complexity without background querying or routing tables.
+## Matrix Density Levels (1 - 5 Config)
 
-## Architecture & Structural Enforcement
+The engine introduces a dynamic **Matrix Density** regulator that adapts the data's internal "knowledge" and speed:
 
-The core execution engine enforces strict structural coupling between spatial metadata, file-system location, and data integrity verification.
+1. **Level 1 (Macro Space / Max Speed):** Minimal headers, zero extra calculations. Raw payload is pushed directly to the disk instantly.
+2. **Level 2 (Balanced - Default):** Standard operational velocity with strict hard-enforced physical disk synchronization (`os.fsync`) against write corruption.
+3. **Level 3 (Deep Space):** Expands the data's awareness by embedding exact high-precision cryptographic creation timestamps.
+4. **Level 4-5 (Atomic / Absolute Integrity):** Dense validation strata. Generates and embeds unique content checksums, verifying absolute byte integrity upon read execution.
 
-1. **Ingestation**: Payload structure generates an identity hash tied to physical storage boundaries (Storage, Layer, Row).
-2. **Mathematical Mapping**: The engine computes a deterministic block offset by bitwise XOR operations combining the spatial hash, the cryptographically unique UUID bytes, and an entropy constraint.
-3. **Hardware Write**: Data is written directly to the computed NVMe/SSD sector pool, bypassing sequential file lists.
+## Collision Resolution (Sub-Index Stratum)
 
-## Licensing & Compliance (Megkerülhetetlenség)
+When multiple data bundles attempt to occupy the exact same coordinate row simultaneously, the system expands the row into sub-strata using an Excel-style endless index generator (`A`, `B`, `C` ... `Z`, then `A2`, `B2` ... `Z2`). 
 
-This software is dual-licensed under the **GNU Affero General Public License v3 (AGPLv3)**. 
+Each bundle claims its exact available sub-index, burns it into its header metadata, and safely coexists side-by-side on the storage drive without any danger of overwriting.
 
-### Enterprise Implications:
-* **The Cloud Loophole is Closed**: Section 13 of the AGPLv3 strictly mandates that any entity offering this engine as a network service (SaaS, Cloud Infrastructure, PaaS) must immediately disclose their entire derivative source code to the public.
-* **Binary Runtime Enforcement**: Every data block written by the engine is prefixed with an immutable 44-byte binary header containing the `CONSCIOUS_DATA_AGPLv3_PROTECTED_CORE` cryptographic signature. The read pipeline (`parse_header`) strictly validates this signature at the hardware I/O layer.
-* **Derivative Works Constraint**: Any proprietary infrastructure, closed-source storage manager, or enterprise software layer that links against or integrates this core runtime automatically becomes a derivative work under copyleft provisions.
+## License
 
-### Commercial Licensing
-For enterprise deployments requiring integration into proprietary, closed-source cloud stacks or distributed storage systems without source code disclosure, a **Commercial License** must be obtained directly from the author.
+This project is protected and distributed under the **GNU Affero General Public License v3 (AGPLv3)**. See the LICENSE file for full core protection details.
